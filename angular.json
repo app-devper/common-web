@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-registration-login-example": {
+    "common-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-registration-login-example",
+            "outputPath": "dist/common-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-registration-login-example:build"
+            "browserTarget": "common-web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-registration-login-example:build:production"
+              "browserTarget": "common-web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-registration-login-example:build"
+            "browserTarget": "common-web:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-registration-login-example:serve"
+            "devServerTarget": "common-web:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-registration-login-example:serve:production"
+              "devServerTarget": "common-web:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-registration-login-example"
+  "defaultProject": "common-web"
 }
